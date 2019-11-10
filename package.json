@@ -1,0 +1,59 @@
+{
+  "name": "fable-elmish-electron-demo",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "install": "electron-rebuild",
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "npm run compile && electron-builder",
+    "dist:dir": "npm run dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "electronWebpack": {
+    "title": true,
+    "main": {
+      "sourceDirectory": "src/Main",
+      "webpackConfig": "webpack.additions.main.js"
+    },
+    "renderer": {
+      "sourceDirectory": "src/Renderer",
+      "webpackConfig": "webpack.additions.renderer.js"
+    }
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.6.0",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/lab": "4.0.0-alpha.31",
+    "autosuggest-highlight": "^3.1",
+    "cylon": "^1.3.0",
+    "cylon-neurosky": "github:aolney/cylon-neurosky#1.0.1",
+    "cylon-sphero": "github:aolney/cylon-sphero#1.0.0",
+    "downshift": "^3.4.1",
+    "match-sorter": "^4.0",
+    "mdi-material-ui": "^6.8.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "serialport": "^8.0.5",
+    "source-map-support": "^0.5.16",
+    "toastr": "^2",
+    "typeface-roboto": "^0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.0",
+    "bufferutil": "^4.0",
+    "devtron": "^1.4",
+    "electron": "^7.1.0",
+    "electron-builder": "^22.1.0",
+    "electron-devtools-installer": "^2.2",
+    "electron-rebuild": "^1.8.6",
+    "electron-webpack": "^2.7.4",
+    "electron-window-state": "^5.0",
+    "fable-compiler": "^2.4.9",
+    "fable-loader": "^2.1",
+    "node-sass": "^4.13.0",
+    "remotedev": "^0.2",
+    "sass-loader": "^8.0",
+    "utf-8-validate": "^5.0",
+    "webpack": "^4.41.2"
+  }
+}
