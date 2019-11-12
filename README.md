@@ -2,15 +2,23 @@
 
 - Connects to Sphero and Mindwave Mobile via bluetooth using Cylon.js.
 - Moves the Sphero when the Mindwave indicates meditation.
+- Runs on Ubuntu 18.04 with Node 10
 
 ## Setting up Bluetooth
 
 - Pair the devices in the bluetooth manager. They will show as disconnected
 - Use `hcitool scan` to find the MAC addresses of Sphero and Mindwave
-- Run `rfcomm connect 0 <mindwave address> 1`
-- Run `rfcomm connect 1 <sphero address> 2` in a different terminal
+- Run `sudo rfcomm connect 0 <sphero address> 1`
+- Run `sudo rfcomm connect 1 <mindwave address> 1` in a different terminal
 
 This will connect the devices to /dev/rfcomm0 and /dev/rfcomm1 respectively.
+Both must use channel 1.
+
+It may help to [add your user to the dialout group](https://github.com/aolney/sphero.js).
+
+The demo referenced below is used as a shell.
+
+**TODO: Cleaning out unused UI**
 
 -----------------
 
