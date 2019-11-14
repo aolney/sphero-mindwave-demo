@@ -1,4 +1,4 @@
-# Sphero EEG Demo
+# Sphero MindWave Demo
 
 - Connects to Sphero and Mindwave Mobile via bluetooth using Cylon.js.
 - Moves the Sphero when the Mindwave indicates meditation.
@@ -16,7 +16,7 @@ Both must use channel 1.
 
 It may help to [add your user to the dialout group](https://github.com/aolney/sphero.js).
 
-The demo referenced below is used as a shell.
+The demo referenced below is used as a shell and has instructions for building/running the project.
 
 **TODO: Cleaning out unused UI**
 
