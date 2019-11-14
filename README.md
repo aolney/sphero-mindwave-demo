@@ -4,17 +4,28 @@
 - Moves the Sphero when the Mindwave indicates meditation.
 - Runs on Ubuntu 18.04 with Node 10
 
-## Setting up Bluetooth
+## Running the project
 
+- [Add your user to the dialout group](https://github.com/aolney/sphero.js) and REBOOT.
 - Pair the devices in the bluetooth manager. They will show as disconnected
-- Use `hcitool scan` to find the MAC addresses of Sphero and Mindwave
+- You need their mac addresses. You can either get these from your bluetooth manager (double or right click the entry) or use `hcitool scan` to find the MAC addresses
 - Run `sudo rfcomm connect 0 <sphero address> 1`
 - Run `sudo rfcomm connect 1 <mindwave address> 1` in a different terminal
+- Run dotnet fake build in the project folder
+- Hit the `Run demo` button
 
-This will connect the devices to /dev/rfcomm0 and /dev/rfcomm1 respectively.
-Both must use channel 1.
+As long as the devices are connected to /dev/rfcomm0 and /dev/rfcomm1 respectively, both using channel 1, the demo project should connect to them.
 
-It may help to [add your user to the dialout group](https://github.com/aolney/sphero.js).
+## Troubleshooting
+
+- The Sphero is blinking
+    - You are not connected on rfcomm. Once it is connected, the Sphero will be solid blue
+- The MindWave is blinking
+    - You are not connected on rfcomm. Once it is connected, the MindWave LED will be solid blue
+- The Sphero/Mindwave are connected, but the demo isn't doing anything
+    - Check the console (F12) of Electron.
+    - The MindWave will be read about once a second and will display the current meditation value. If you don't see a meditation value, check your LED and rfcomm connection
+    - Once the meditation is non-zero, the Sphero color should change based on the meditation value. If the meditation value is high enough, the Sphero will turn green and roll
 
 The demo referenced below is used as a shell and has instructions for building/running the project.
 
