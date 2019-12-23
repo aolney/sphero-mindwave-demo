@@ -8,17 +8,11 @@ nuget Fable.Elmish ~> 3.0
 nuget Fable.Elmish.Debugger ~> 3.0
 nuget Fable.Elmish.HMR ~> 4.0
 nuget Fable.Elmish.React ~> 3.0
-nuget Fable.Import.AutosuggestHighlight ~> 1.1
-nuget Fable.Import.Downshift ~> 1.1
-nuget Fable.Import.MatchSorter ~> 1.1
-nuget Fable.Import.Node ~> 0.4.0
-nuget Fable.MaterialUI ~> 4.0
-nuget Fable.MaterialUI.Icons ~> 1.1
-nuget Fable.MaterialUI.MaterialDesignIcons ~> 2.0
+nuget Fable.FontAwesome.Free
 nuget Fable.Promise ~> 2.0
 nuget Fable.React ~> 5.2
-nuget Feliz.MaterialUI
 nuget FSharp.Core ~> 4.0 redirects: force
+nuget Fulma
 
 group FakeBuild
   source https://api.nuget.org/v3/index.json

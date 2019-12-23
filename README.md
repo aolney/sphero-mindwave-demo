@@ -11,7 +11,7 @@
 - You need their mac addresses. You can either get these from your bluetooth manager (double or right click the entry) or use `hcitool scan` to find the MAC addresses
 - Run `sudo rfcomm connect 0 <sphero address> 1`
 - Run `sudo rfcomm connect 1 <mindwave address> 1` in a different terminal
-- Run dotnet fake build in the project folder
+- Run `dotnet fake build` in the project folder. A faster version is `npm run dev`
 - Hit the `Run demo` button
 
 As long as the devices are connected to /dev/rfcomm0 and /dev/rfcomm1 respectively, both using channel 1, the demo project should connect to them.
@@ -23,17 +23,17 @@ As long as the devices are connected to /dev/rfcomm0 and /dev/rfcomm1 respective
 - The MindWave is blinking
     - You are not connected on rfcomm. Once it is connected, the MindWave LED will be solid blue
 - The Sphero/Mindwave are connected, but the demo isn't doing anything
-    - Check the console (F12) of Electron.
-    - The MindWave will be read about once a second and will display the current meditation value. If you don't see a meditation value, check your LED and rfcomm connection
+    - Check the console (Ctrl+Shift+i) of Electron.
+    - The MindWave **should** read about once a second and will display the current meditation value. It **should** start as soon as you hit run demo. If it doesn't, turn the MindWave off/on, reconnect rfcomm, and restart the program.
     - Once the meditation is non-zero, the Sphero color should change based on the meditation value. If the meditation value is high enough, the Sphero will turn green and roll
 
-The demo referenced below is used as a shell and has instructions for building/running the project.
-
-**TODO: Cleaning out unused UI**
+Development instructions are below. Building for distribution using the packed installer generates an AppImage that has been tested to work. You'll want to `Ctrl+Shift+i` to see the console messages.
 
 -----------------
 
-# Fable-Elmish-Electron-Material-UI demo [![Build status](https://ci.appveyor.com/api/projects/status/hm2w65e3enahp55g/branch/master?svg=true)](https://ci.appveyor.com/project/cmeeren/fable-elmish-electron-material-ui-demo/branch/master)
+## Development
+
+This project is based on Fable-Elmish-Electron-Material-UI demo [![Build status](https://ci.appveyor.com/api/projects/status/hm2w65e3enahp55g/branch/master?svg=true)](https://ci.appveyor.com/project/cmeeren/fable-elmish-electron-material-ui-demo/branch/master). The development instructions below are largely copied from that project.
 
 This is an example of an F# Electron app centered around Fable 2 and Elmish. The actual app contents (which you can easily replace to build your own Electron app) are intended to show how to use Material-UI (including JSS/style-as-code) as well as serve as examples of how to implement some (not always trivial) UX patterns in Elmish.
 
