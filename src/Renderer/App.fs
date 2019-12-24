@@ -98,30 +98,9 @@ let RootView = FunctionComponent.Of((fun (model, dispatch) ->
               Button.Color IsPrimary
               Button.OnClick (fun _ -> dispatch Connect )
             ] [ str "Connect" ]
-            // Section.section [] [
-            //   Box.box'[] [
-            //     Label.label[ Label.Size IsLarge ] [
-            //        model.Meditation.ToString() |> str
-            //     ]
-            //   ]
-            // ]
           ]
-          // Column.column [ Column.Width  (Screen.All, Column.IsOneThird )  ] [
-          //   Box.box'[] [
-          //     Label.label[ Label.Size IsLarge ] [
-          //        model.Meditation.ToString() |> str
-          //     ]
-          //   ]
-          // ]
         ]
       ]
-      // Container.container[] [
-      //   Box.box'[] [
-      //     Label.label[ Label.Size IsLarge ] [
-      //        model.Meditation.ToString() |> str
-      //     ]
-      //   ]
-      // ]
     ]
   ]
 ), "RootView", memoEqualsButFunctions)

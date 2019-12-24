@@ -8,7 +8,7 @@
 
 - [Add your user to the dialout group](https://github.com/aolney/sphero.js) and REBOOT.
 - Pair the devices in the bluetooth manager. They will show as disconnected
-- You need their mac addresses. You can either get these from your bluetooth manager (double or right click the entry) or use `hcitool scan` to find the MAC addresses
+- You need their addresses. You can either get these from your bluetooth manager (double or right click the entry) or use `hcitool scan` to find the device addresses
 - Run `sudo rfcomm connect 0 <sphero address> 1`
 - Run `sudo rfcomm connect 1 <mindwave address> 1` in a different terminal
 - Run `dotnet fake build` in the project folder. A faster version is `npm run dev`

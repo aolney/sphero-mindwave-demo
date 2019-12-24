@@ -69,7 +69,7 @@ let Connect neuroskyPort spheroPort =
                             "green" => 0
                         ]
                     )
-                    // my?sphero?stop()
+                    my?sphero?stop()
                 )
         ]
     cylon.robot(cylonConfig).start() |> ignore
